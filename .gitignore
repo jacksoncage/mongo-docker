@@ -1,0 +1,6 @@
+.vagrant/
+log/
+user-data
+config.rb
+mongodata/
+docker_mongodb_cluster/mongodata/
