@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 MAINTAINER  Love Nyberg "love@bloglovin.com"
 
 # Add 10gen official apt source to the sources list
@@ -13,13 +13,14 @@ RUN mkdir -p /data/db
 
 EXPOSE 27017
 
-ADD initiate.js /initiate.js
-ADD setupReplicaSet1.js /setupReplicaSet1.js
-ADD setupReplicaSet2.js /setupReplicaSet2.js
-ADD setupReplicaSet3.js /setupReplicaSet3.js
-ADD addShard.js /addShard.js
-ADD addDB.js /addDB.js
-ADD enabelSharding.js /enabelSharding.js
+ADD js/initiate.js /initiate.js
+ADD js/setupReplicaSet1.js /setupReplicaSet1.js
+ADD js/setupReplicaSet2.js /setupReplicaSet2.js
+ADD js/setupReplicaSet3.js /setupReplicaSet3.js
+ADD js/addShard.js /addShard.js
+ADD js/addDBs.js /addDBs.js
+ADD js/enabelSharding.js /enabelSharding.js
+ADD js/addIndexes.js /addIndexes.js
 ADD start /start
 RUN chmod 0755 /start /*.js
 
