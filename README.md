@@ -50,8 +50,13 @@ You should now be able connect to mongos1 and the new sharded cluster:
 	$ mongo --port 49550
 
 
-## ToDo
- - Save MongoDB data on persistent storage
+## Kill/restart cluster
+To re-initiate cluster run `start_cluster.sh` again. To rebuild vagrant `vagrant destroy` and then `vagrant up` 
+
+
+## Persistent storage
+Data is stored at `./docker_mongodb_cluster/mongodata/` and are excluded from version control. Data will be persistent even for a `vagrant destroyy` as it's mounted into vagrant and then needed container as well. To remove all data `rm -rf ./docker_mongodb_cluster/mongodata/*`
+
 
 ## Built upon
  - [MongoDB Sharded Cluster by Sebastian Voss](https://github.com/sebastianvoss/docker)
