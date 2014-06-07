@@ -55,7 +55,7 @@ To re-initiate cluster run `start_cluster.sh` again. To rebuild vagrant `vagrant
 
 
 ## Persistent storage
-Data is stored at `./docker_mongodb_cluster/mongodata/` and are excluded from version control. Data will be persistent even for a `vagrant destroyy` as it's mounted into vagrant and then needed container as well. To remove all data `rm -rf ./docker_mongodb_cluster/mongodata/*`
+Data is stored at `./docker_mongodb_cluster/mongodata/` and are excluded from version control. Data will be persistent even for a `vagrant destroy` as it's mounted into vagrant and then needed container as well. To remove all data `rm -rf ./docker_mongodb_cluster/mongodata/*`
 
 
 ## Built upon
