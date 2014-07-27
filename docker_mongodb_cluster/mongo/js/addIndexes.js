@@ -1,1 +1,1 @@
-db.stats.ensureIndex( { b: 1,_id:-1 } );
+db.testData.ensureIndex( { b: 1,_id:-1 } );
