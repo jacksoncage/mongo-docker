@@ -9,7 +9,7 @@ MongoDB cluster consisted of the following docker containers
  - **skydock**:	Used for service discovery and inserts internal docker images records into skydns.
  - **skydns**: Used as internal DNS for containers.
 
-There unfortunately some hard-coded timeouts due to timing issues with MongoDB.
+Unfortunately there are some hard coded timeouts due to timing issues with MongoDB.
 
 ## Installation:
 
@@ -38,7 +38,7 @@ Install VirtualBox and Vagrant using [Brew Cask](https://github.com/phinze/homeb
 	vagrant up
 
 ## Setup Cluster
-This will pull all the images from [Docker index](https://index.docker.io/u/jacksoncage/mongo/) and setup Mongodb sharded cluster. Please make sure `DOCKERIP` in `docker_mongodb_cluster/start_cluster.sh` is using docker0 interface or public IP if you prefere that.
+This will pull all the images from [Docker index](https://index.docker.io/u/jacksoncage/mongo/) and setup Mongodb sharded cluster. Please make sure `DOCKERIP` in `docker_mongodb_cluster/start_cluster.sh` is using docker0 interface or public IP if you prefer that.
 
 	vagrant ssh
 	./docker/start_cluster.sh"
@@ -58,7 +58,7 @@ To re-initiate cluster run `start_cluster.sh` again. To rebuild vagrant `vagrant
 Data is stored at `./docker_mongodb_cluster/mongodata/` and are excluded from version control. Data will be persistent even for a `vagrant destroy` as it's mounted into vagrant and then needed container as well. To remove all data `rm -rf ./docker_mongodb_cluster/mongodata/*`
 
 ## Issues
- - **Shard folders** - shared folder may not work at some system with certain vagrant and virtualbox version (this issue is not fixed until now ), so users may need to use some other ways to upload .sh and .js files in `docker_mongodb_cluster/mongo/js`
+ - **Shard folders** - shared folder may not work at some system with certain vagrant and virtualbox version (this issue is not fixed until now), so users may need to use some other ways to upload .sh and .js files in `docker_mongodb_cluster/mongo/js`
 
 
 ## Built upon
