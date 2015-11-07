@@ -41,7 +41,7 @@ Install VirtualBox and Vagrant using [Brew Cask](https://github.com/phinze/homeb
 This will pull all the images from [Docker index](https://index.docker.io/u/jacksoncage/mongo/) and setup Mongodb sharded cluster. Please make sure `DOCKERIP` in `docker_mongodb_cluster/start_cluster.sh` is using docker0 interface or public IP if you prefer that.
 
 	vagrant ssh
-	./docker/start_cluster.sh"
+	./docker/start_cluster.sh
 
 You should now be able connect to mongos1 and the new sharded cluster:
 
